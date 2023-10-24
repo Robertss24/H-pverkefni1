@@ -1,0 +1,290 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+}
+
+
+.store-name {
+  font-size: 40px; /* Set the font size to 40px */
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+nav input[type="text"] {
+  flex-grow: 1;
+  width: 400px; /* Decreased the width */
+  height: 50px;  /* Decreased the height */
+  padding: 8px 16px; /* Adjusted the padding */
+  margin: 0 10px;
+  border: 1px solid #e5e5e5;
+}
+
+.nav-right a {
+  font-size: 16px; /* Set the font size to 16px for the links */
+  margin-right: 15px; /* Increase the space between links */
+  text-decoration: none;
+  color: black;
+}
+
+.cogwheel-img, .shopping-cart-img {
+  height: 30px; /* Adjust this value to your preference */
+  width: auto;  
+  margin-right: 10px; 
+}
+
+header {
+  text-align: center;
+  padding: 50px 0;
+  background-image: url('Myndir/Header.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
+  height: 400px;
+  position: relative;
+}
+
+header::before {
+  content: ""; /* Necessary for the pseudo-element to show */
+  position: absolute; /* Absolute positioning */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  /* If you want a black faded effect, use: background-color: rgba(0, 0, 0, 0.5); */
+}
+
+header h1 {
+  font-size: 160px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative; /* This ensures the text is above the overlay */
+
+}
+
+header p {
+  font-size: 36px;
+  position: relative; /* This ensures the text is above the overlay */
+
+}
+.weekly-products {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  height: 520px;
+  gap: 10px;
+  margin-top: 70px;
+}
+.weekly-products.reversed {
+  flex-direction: row-reverse;
+}
+
+.product-text, .product-image {
+  flex: 1;  /* They take equal space */
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+}
+
+.product-text {
+  flex-direction: column;   /* Stack h2 and p vertically */
+  text-align: left center;      /* This will center the text inside */
+}
+
+.product-text h2 {
+  margin: 0;
+  font-size: 24px;      
+  font-weight: bold;    
+}
+
+.product-text p {
+  font-size: 16px;
+  width: 448px;       
+  height: 128px;      
+  overflow: hidden;   
+  margin: 0 auto;     /* Center this block */
+  text-align: center; /* Center the text inside */
+}
+
+.product-image {
+  flex: 1;
+  display: flex;
+  justify-content:  center; 
+  align-items:  center; 
+  margin-right: 0px;
+}
+
+.product-image img {
+  max-width: 50%; 
+  height: auto;
+}
+.product-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 668px;
+  padding: 0 20px;  /* Some padding on the sides */
+}
+
+.product-box {
+  flex: 1; /* Divides the section into 4 equal parts */
+  border: 1px solid #e5e5e5; /* Example border */
+  padding: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't increase box size */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.product-box .product-image img {
+  width: 80%; /* Or adjust based on your needs */
+  max-height: 50%; /* Limit height */
+  object-fit: cover; /* Ensures image doesn't stretch */
+}
+
+.product-box p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.disclaimer {
+  font-size: 12px; /* Smaller font size for disclaimer */
+  color: red; /* Example color to highlight disclaimer */
+  text-align: center;
+}
+
+.product-price {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.add-to-cart {
+  background-color: #333; /* Dark background for button */
+  color: #fff; /* White text for button */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-to-cart:hover {
+  background-color: #555; /* Slightly lighter on hover */
+  margin-top: auto;
+}
+.new-products {
+  width: 100%; 
+  height: 500px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #E1CEC2;
+  padding: 20px;
+  
+}
+.featured-products {
+    background-color: #E1CEC2;
+    padding: 50px 0; /* Adding some padding for space */
+}
+
+.new-products h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+.new-products-title {
+  font-size: 36px;
+  margin-left: -300px; /* Adjust this value to your preference */
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px; /* This will ensure the boxes stay within this width. */
+  margin: 0 auto;
+}
+
+.product-item {
+  width: 330px;
+  height: 360px;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+}
+
+.product-item img {
+  width: 100%;
+  max-height: 60%; 
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  margin-bottom: 10px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #3C2A1E;
+  color: #fff;
+  height: 270px;  
+  margin-top: 100px;
+}
+
+.footer-box {
+  flex: 1;
+  padding: 40px 20px 20px;  /* Add padding to the top to push content down */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;  
+}
+
+.footer-box h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-box p, .footer-box ul {
+  margin: 5px 0;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li {
+  margin: 5px 0;
+}
+
+.footer-box ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-box ul li a:hover {
+  color: #ddd;
+}
